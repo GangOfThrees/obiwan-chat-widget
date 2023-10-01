@@ -1,0 +1,40 @@
+{
+  "name": "obiwan-chat-widget",
+  "version": "0.0.1",
+  "description": "An AI customer service chat widget for obi-wan",
+  "main": "src/index.ts",
+  "scripts": {
+    "dev": "ladle serve",
+    "watch": "tsup --watch",
+    "build": "tsup  --format esm,cjs,iife --dts --sourcemap",
+    "test": "jest",
+    "changeset": "changeset",
+    "release": "yarn build && changeset publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/GangOfThrees/obiwan-chat-widget.git"
+  },
+  "keywords": [
+    "chatgpt",
+    "chat",
+    "widget"
+  ],
+  "author": "simeonnortey",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GangOfThrees/obiwan-chat-widget/issues"
+  },
+  "homepage": "https://github.com/GangOfThrees/obiwan-chat-widget#readme",
+  "devDependencies": {
+    "@ladle/react": "^3.0.0",
+    "tsup": "^7.2.0",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.11.0",
+    "styled-components": "^6.0.8"
+  }
+}
