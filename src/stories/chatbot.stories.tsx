@@ -4,7 +4,7 @@ import { ChatBot } from "..";
 export const ChatBotStory = () => {
   return (
     <>
-      <ChatBot />
+      <ChatBot apiUrl="http://localhost:8000/bot/kb" apiKey="TEST-KEY-1" />
     </>
   );
 };

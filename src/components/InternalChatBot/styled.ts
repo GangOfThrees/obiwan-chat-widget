@@ -81,7 +81,6 @@ export const InputContainer = styled.div`
 export const MessageArea = styled.div`
   overflow-y: scroll;
   height: 100%;
-  padding-bottom: 300px;
 `;
 
 export const Input = styled.input`
