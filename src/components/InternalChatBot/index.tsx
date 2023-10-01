@@ -23,8 +23,17 @@ export const InternalChatBot = ({ apiUrl, apiKey }) => {
   const [question, setQuestion] = useState<string>();
   const chatHistory = useGetChat();
   const { mutateAsync: askQuestion, isLoading } = useAskQuestion();
-
   const [toggle, setToggle] = useState<boolean>(false);
+  const scrollToBottom = () => {
+    if (chatBoxRef.current) {
+      console.log("scroll called");
+      chatBoxRef.current.scrollTop = chatBoxRef.current.scrollHeight;
+    }
+  };
+
+  useEffect(() => {
+    scrollToBottom();
+  }, [chatHistory]);
 
   const handleInputChange = (e) => {
     setQuestion(e.target.value);
@@ -40,6 +49,7 @@ export const InternalChatBot = ({ apiUrl, apiKey }) => {
         apiKey,
         payload: { question: tempQuestion },
       });
+      scrollToBottom();
     }
   };
   return (
